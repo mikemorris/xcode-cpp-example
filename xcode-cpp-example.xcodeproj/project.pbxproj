@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7DA7E2CF1BCF0753008441F8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7E2CE1BCF0753008441F8 /* main.cpp */; };
+		7D16682E1BCF0A0700B5A751 /* libgeojsonvt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D16682C1BCF094B00B5A751 /* libgeojsonvt.a */; };
+		7D1668351BCF0BD700B5A751 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D1668341BCF0BD700B5A751 /* main.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D16682C1BCF094B00B5A751 /* libgeojsonvt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgeojsonvt.a; path = "mason_packages/osx-10.11/geojsonvt/2.1.6/lib/libgeojsonvt.a"; sourceTree = "<group>"; };
+		7D16682F1BCF0A9100B5A751 /* document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = document.h; path = mason_packages/headers/rapidjson/1.0.2/include/rapidjson/document.h; sourceTree = "<group>"; };
+		7D1668341BCF0BD700B5A751 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7DA7E2CB1BCF0753008441F8 /* xcode-cpp-example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "xcode-cpp-example"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DA7E2CE1BCF0753008441F8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D16682E1BCF0A0700B5A751 /* libgeojsonvt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +45,9 @@
 		7DA7E2C21BCF0752008441F8 = {
 			isa = PBXGroup;
 			children = (
-				7DA7E2CD1BCF0753008441F8 /* xcode-cpp-example */,
+				7D16682C1BCF094B00B5A751 /* libgeojsonvt.a */,
+				7D16682F1BCF0A9100B5A751 /* document.h */,
+				7D1668341BCF0BD700B5A751 /* main.cpp */,
 				7DA7E2CC1BCF0753008441F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +58,6 @@
 				7DA7E2CB1BCF0753008441F8 /* xcode-cpp-example */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		7DA7E2CD1BCF0753008441F8 /* xcode-cpp-example */ = {
-			isa = PBXGroup;
-			children = (
-				7DA7E2CE1BCF0753008441F8 /* main.cpp */,
-			);
-			path = "xcode-cpp-example";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +115,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DA7E2CF1BCF0753008441F8 /* main.cpp in Sources */,
+				7D1668351BCF0BD700B5A751 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +202,11 @@
 		7DA7E2D31BCF0753008441F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mason_packages/osx-10.11/geojsonvt/2.1.6/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -211,6 +214,11 @@
 		7DA7E2D41BCF0753008441F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mason_packages/osx-10.11/geojsonvt/2.1.6/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -234,6 +242,7 @@
 				7DA7E2D41BCF0753008441F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
